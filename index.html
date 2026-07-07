@@ -126,20 +126,39 @@
 
     <!-- Navbar -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-white text-[#0F2854] shadow-sm border-b border-gray-100 transition-all duration-300">
-        <div class="relative flex items-center px-8 py-4 w-full h-full">
+        <div class="relative flex items-center justify-between px-5 md:px-8 py-4 w-full h-full">
             <!-- Logo -->
             <a href="#" class="cursor-pointer z-10">
                 <img src="img/LogoDema.jpeg" alt="Logo DEMA UINSA" class="h-8 md:h-10 w-auto object-contain">
             </a>
             
             <!-- Desktop Menu -->
-            <div class="hidden lg:flex absolute inset-0 items-center justify-center pointer-events-none z-0">
+            <div class="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none z-0">
                 <nav class="flex gap-6 text-base font-semibold pointer-events-auto">
                     <a href="#tentang-kami" class="text-[#0F2854]/80 hover:text-[#0F2854] hover:bg-gray-100 px-4 py-1.5 rounded transition">Tentang Kami</a>
                     <a href="#struktur" class="text-[#0F2854]/80 hover:text-[#0F2854] hover:bg-gray-100 px-4 py-1.5 rounded transition">Struktur</a>
                     <a href="#bergabung" class="text-[#0F2854]/80 hover:text-[#0F2854] hover:bg-gray-100 px-4 py-1.5 rounded transition">Bergabung</a>
                 </nav>
             </div>
+
+            <!-- Hamburger Button (Mobile Only) -->
+            <button id="hamburger-btn" class="block md:hidden z-10 p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Buka Menu">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
+            <nav class="flex flex-col px-5 py-4 gap-1">
+                <a href="#tentang-kami" class="mobile-nav-link text-[#0F2854]/80 hover:text-[#0F2854] hover:bg-gray-100 px-4 py-3 rounded-lg font-semibold transition">Tentang Kami</a>
+                <a href="#struktur" class="mobile-nav-link text-[#0F2854]/80 hover:text-[#0F2854] hover:bg-gray-100 px-4 py-3 rounded-lg font-semibold transition">Struktur</a>
+                <a href="#bergabung" class="mobile-nav-link text-[#0F2854]/80 hover:text-[#0F2854] hover:bg-gray-100 px-4 py-3 rounded-lg font-semibold transition">Bergabung</a>
+            </nav>
         </div>
     </header>
 
@@ -161,15 +180,15 @@
             <div class="z-10 mt-12 md:mt-20 px-4 max-w-4xl mx-auto relative h-[250px] md:h-[300px] w-full flex justify-center">
                 <!-- Slide 1 Text (Opening) -->
                 <div class="text-center absolute inset-0 transition-opacity duration-1000 opacity-100 z-10 slider-text flex flex-col justify-start">
-                    <h1 class="font-serif text-5xl md:text-7xl font-bold tracking-tight mb-6 drop-shadow-2xl text-white">
+                    <h1 class="font-serif text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-4 md:mb-6 drop-shadow-2xl text-white">
                         Selamat Datang
                     </h1>
-                    <div class="flex flex-col items-center space-y-3">
-                        <p class="text-lg md:text-2xl font-light text-gray-200 drop-shadow-lg tracking-wide">
+                    <div class="flex flex-col items-center space-y-2 md:space-y-3">
+                        <p class="text-sm sm:text-lg md:text-2xl font-light text-gray-200 drop-shadow-lg tracking-wide px-4">
                             di <span class="font-semibold text-white">Dewan Mahasiswa Fakultas Hukum dan Syariah</span>
                         </p>
-                        <div class="h-1 w-24 bg-gradient-to-r from-transparent via-white to-transparent rounded-full my-2 opacity-70"></div>
-                        <p class="text-sm md:text-lg font-medium text-gray-300 drop-shadow-md tracking-[0.2em] uppercase">
+                        <div class="h-1 w-24 bg-gradient-to-r from-transparent via-white to-transparent rounded-full my-1 md:my-2 opacity-70"></div>
+                        <p class="text-xs md:text-lg font-medium text-gray-300 drop-shadow-md tracking-[0.15em] md:tracking-[0.2em] uppercase">
                             Universitas Islam Negeri Sunan Ampel
                         </p>
                     </div>
@@ -177,10 +196,10 @@
 
                 <!-- Slide 2+ Text (Description) -->
                 <div class="text-center absolute inset-0 transition-opacity duration-1000 opacity-0 -z-10 slider-text flex flex-col justify-start items-center pt-4 md:pt-8">
-                    <h2 class="font-serif text-3xl md:text-5xl font-bold tracking-tight mb-4 drop-shadow-xl text-white">
+                    <h2 class="font-serif text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-3 md:mb-4 drop-shadow-xl text-white">
                         Tentang DEMA FSH
                     </h2>
-                    <p class="text-base md:text-xl font-normal text-gray-200 mt-2 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+                    <p class="text-sm md:text-xl font-normal text-gray-200 mt-2 max-w-3xl mx-auto leading-relaxed drop-shadow-md px-4">
                         Lembaga eksekutif mahasiswa yang berdedikasi untuk mewadahi aspirasi, mengembangkan potensi, dan mengabdi untuk seluruh mahasiswa Fakultas Hukum dan Syariah.
                     </p>
                 </div>
@@ -194,15 +213,15 @@
         </section>
 
         <!-- Section 2: Kata Pengantar -->
-        <section id="tentang-kami" class="w-full flex items-center justify-center bg-white py-24 px-4 md:px-8">
-            <div class="max-w-7xl w-full flex flex-col md:flex-row bg-[#f4f4f4] rounded-[2rem] overflow-hidden shadow-sm p-8 md:p-16 lg:p-20 min-h-[500px]">
+        <section id="tentang-kami" class="w-full flex items-center justify-center bg-white py-12 md:py-24 px-4 md:px-8">
+            <div class="max-w-7xl w-full flex flex-col md:flex-row bg-[#f4f4f4] rounded-[2rem] overflow-hidden shadow-sm p-6 sm:p-10 md:p-16 lg:p-20 min-h-[auto] md:min-h-[500px]">
                 
                 <!-- Kiri: Kata Pengantar (Teks) -->
                 <div class="flex-1 flex flex-col justify-center pr-0 md:pr-12 lg:pr-20 stagger-item opacity-0 translate-y-8 transition-all duration-700 ease-out">
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[#0F2854]">
+                    <h2 class="font-serif text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-4 md:mb-6 text-[#0F2854]">
                         Kata Pengantar
                     </h2>
-                    <p class="font-sans font-normal text-[#0F2854]/70 text-lg md:text-xl leading-relaxed text-justify">
+                    <p class="font-sans font-normal text-[#0F2854]/70 text-sm md:text-xl leading-relaxed text-justify">
                         Selamat datang di website resmi Dewan Mahasiswa Fakultas Hukum dan Syariah UIN Sunan Ampel Surabaya. Kami berkomitmen untuk terus menjadi wadah aspirasi, inovasi, dan pergerakan bagi seluruh mahasiswa demi mewujudkan fakultas yang progresif dan berintegritas.
                     </p>
                 </div>
@@ -213,19 +232,19 @@
                 </div>
 
                 <!-- Kanan: Statistik Horizontal (3 Item) -->
-                <div class="flex-1 flex items-center justify-center mt-16 md:mt-0 stagger-item opacity-0 translate-y-8 transition-all duration-700 delay-200 ease-out">
-                    <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="flex-1 flex items-center justify-center mt-8 md:mt-0 stagger-item opacity-0 translate-y-8 transition-all duration-700 delay-200 ease-out">
+                    <div class="w-full grid grid-cols-3 md:grid-cols-3 gap-4 md:gap-8 text-center">
                         <div>
-                            <div class="font-sans text-4xl md:text-5xl font-black text-[#1F6F5F] mb-2"><span class="counter" data-target="25">0</span>+</div>
-                            <div class="font-sans text-sm font-semibold text-[#0F2854]/60 uppercase tracking-widest mt-3">Program Kerja</div>
+                            <div class="font-sans text-3xl md:text-5xl font-black text-[#1F6F5F] mb-1 md:mb-2"><span class="counter" data-target="25">0</span>+</div>
+                            <div class="font-sans text-[10px] md:text-sm font-semibold text-[#0F2854]/60 uppercase tracking-widest mt-1 md:mt-3">Program Kerja</div>
                         </div>
                         <div>
-                            <div class="font-sans text-4xl md:text-5xl font-black text-[#1F6F5F] mb-2"><span class="counter" data-target="1500">0</span>+</div>
-                            <div class="font-sans text-sm font-semibold text-[#0F2854]/60 uppercase tracking-widest mt-3">Mahasiswa Aktif</div>
+                            <div class="font-sans text-3xl md:text-5xl font-black text-[#1F6F5F] mb-1 md:mb-2"><span class="counter" data-target="1500">0</span>+</div>
+                            <div class="font-sans text-[10px] md:text-sm font-semibold text-[#0F2854]/60 uppercase tracking-widest mt-1 md:mt-3">Mahasiswa Aktif</div>
                         </div>
                         <div>
-                            <div class="font-sans text-4xl md:text-5xl font-black text-[#1F6F5F] mb-2"><span class="counter" data-target="40">0</span>+</div>
-                            <div class="font-sans text-sm font-semibold text-[#0F2854]/60 uppercase tracking-widest mt-3">Pengurus Divisi</div>
+                            <div class="font-sans text-3xl md:text-5xl font-black text-[#1F6F5F] mb-1 md:mb-2"><span class="counter" data-target="40">0</span>+</div>
+                            <div class="font-sans text-[10px] md:text-sm font-semibold text-[#0F2854]/60 uppercase tracking-widest mt-1 md:mt-3">Pengurus Divisi</div>
                         </div>
                     </div>
                 </div>
@@ -233,9 +252,9 @@
         </section>
 
         <!-- Section 3: Video Profil -->
-        <section id="section-3" class="w-full bg-white pt-12 pb-24 px-4 md:px-8 flex flex-col items-center justify-center overflow-hidden">
+        <section id="section-3" class="w-full bg-white pt-8 md:pt-12 pb-12 md:pb-24 px-4 md:px-8 flex flex-col items-center justify-center overflow-hidden">
             <!-- Header Judul -->
-            <h2 id="section-3-title" class="font-serif text-4xl md:text-5xl font-bold text-[#0F2854] text-center tracking-tight mb-12 transform opacity-0 -translate-x-[50px] transition-all duration-1000 ease-out">
+            <h2 id="section-3-title" class="font-serif text-2xl sm:text-3xl md:text-5xl font-bold text-[#0F2854] text-center tracking-tight mb-6 md:mb-12 transform opacity-0 -translate-x-[50px] transition-all duration-1000 ease-out">
                 Video Profil DEMA FSH
             </h2>
 
@@ -254,9 +273,9 @@
         </section>
 
         <!-- Section 4: Struktur Organisasi -->
-        <section id="struktur" class="w-full bg-[#f8f9fb] py-24 px-4 md:px-8 flex flex-col items-center justify-center">
+        <section id="struktur" class="w-full bg-[#f8f9fb] py-12 md:py-24 px-4 md:px-8 flex flex-col items-center justify-center">
             <!-- Header Judul -->
-            <h2 id="section-4-title" class="font-serif text-4xl md:text-5xl font-bold text-[#0F2854] text-center tracking-tight mb-12 transform opacity-0 translate-y-8 transition-all duration-1000 ease-out">
+            <h2 id="section-4-title" class="font-serif text-2xl sm:text-3xl md:text-5xl font-bold text-[#0F2854] text-center tracking-tight mb-6 md:mb-12 transform opacity-0 translate-y-8 transition-all duration-1000 ease-out">
                 Struktur Organisasi DEMA FSH
             </h2>
 
@@ -286,12 +305,12 @@
         </section>
 
         <!-- Section 5: Testimoni -->
-        <section id="section-5" class="w-full bg-white py-24 px-4 md:px-8">
+        <section id="section-5" class="w-full bg-white py-12 md:py-24 px-4 md:px-8">
             <div class="max-w-7xl mx-auto">
                 <!-- Header -->
-                <div class="text-center mb-14">
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-[#0F2854] tracking-tight mb-4">Apa Kata Mereka?</h2>
-                    <p class="font-sans text-[#0F2854]/60 text-base md:text-lg max-w-xl mx-auto">Suara dari mahasiswa dan pengurus yang telah bersama DEMA FSH.</p>
+                <div class="text-center mb-8 md:mb-14">
+                    <h2 class="font-serif text-2xl sm:text-3xl md:text-5xl font-bold text-[#0F2854] tracking-tight mb-3 md:mb-4">Apa Kata Mereka?</h2>
+                    <p class="font-sans text-[#0F2854]/60 text-sm md:text-lg max-w-xl mx-auto">Suara dari mahasiswa dan pengurus yang telah bersama DEMA FSH.</p>
                 </div>
 
                 <!-- Carousel Wrapper dengan Tombol Nav di Luar -->
@@ -422,26 +441,26 @@
         </section>
 
         <!-- Section 6: Call To Action (Dark Cinematic) -->
-        <section id="bergabung" class="w-full bg-white py-16 px-4 md:px-8">
-            <div id="cta-banner" class="relative max-w-5xl mx-auto rounded-3xl shadow-2xl overflow-hidden bg-[#0F2854] opacity-0 translate-y-12 transition-all duration-1000 ease-out">
-                <div class="grid md:grid-cols-2 min-h-[340px] md:min-h-[400px]">
+        <section id="bergabung" class="w-full bg-white py-10 md:py-16 px-4 md:px-8">
+            <div id="cta-banner" class="relative max-w-5xl mx-auto rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden bg-[#0F2854] opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+                <div class="grid md:grid-cols-2 min-h-[auto] md:min-h-[400px]">
                     
                     <!-- Sisi Kiri: Teks & CTA -->
-                    <div class="relative z-10 flex flex-col justify-center px-10 py-14 md:px-16 md:py-20 lg:px-20">
-                        <div class="flex items-center gap-2 mb-6">
+                    <div class="relative z-10 flex flex-col justify-center p-6 sm:p-10 md:p-16 lg:p-20">
+                        <div class="flex items-center gap-2 mb-4 md:mb-6">
                             <div class="h-px w-8 bg-[#FF74B1]"></div>
                             <span class="text-[#FF74B1] text-xs font-bold tracking-[0.2em] uppercase">Bergabung Sekarang</span>
                         </div>
-                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
+                        <h2 class="font-serif text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight tracking-tight mb-4 md:mb-6">
                             Siap Menjadi<br>
                             <span class="text-[#FF74B1]">Bagian dari</span><br>
                             Perubahan?
                         </h2>
-                        <p class="font-sans text-gray-300 text-base md:text-lg leading-relaxed mb-10 max-w-sm">
+                        <p class="font-sans text-gray-300 text-sm md:text-base leading-relaxed mb-6 md:mb-10 max-w-sm">
                             Jadilah penggerak roda organisasi. Temukan potensimu, perluas jaringanmu, dan berdampak nyata bagi Fakultas dan Universitas.
                         </p>
                         <div>
-                            <a href="#" id="cta-daftar-btn" class="inline-flex items-center justify-center gap-2 bg-[#FF74B1] text-white font-bold tracking-wide text-sm uppercase px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,116,177,0.6)] w-fit">
+                            <a href="#" id="cta-daftar-btn" class="inline-flex items-center justify-center gap-2 bg-[#FF74B1] text-white font-bold tracking-wide text-sm md:text-base uppercase px-6 py-3 md:px-8 md:py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,116,177,0.6)] w-full md:w-fit">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
                                     <path d="M16 11l-4-4-4 4h3v4h2v-4z"/>
@@ -542,6 +561,40 @@
                     }
                 });
             });
+        });
+    </script>
+
+    <!-- Script Hamburger Menu (Mobile) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const mobileMenu   = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon     = document.getElementById('close-icon');
+
+            if (hamburgerBtn && mobileMenu) {
+                hamburgerBtn.addEventListener('click', function () {
+                    const isOpen = !mobileMenu.classList.contains('hidden');
+                    if (isOpen) {
+                        mobileMenu.classList.add('hidden');
+                        hamburgerIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    } else {
+                        mobileMenu.classList.remove('hidden');
+                        hamburgerIcon.classList.add('hidden');
+                        closeIcon.classList.remove('hidden');
+                    }
+                });
+
+                // Tutup menu otomatis saat link diklik
+                document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        mobileMenu.classList.add('hidden');
+                        hamburgerIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    });
+                });
+            }
         });
     </script>
 
@@ -703,7 +756,7 @@
             const splide = new Splide('#splide-testimoni', {
                 type        : 'loop',
                 perPage     : 3,
-                perMove     : 3,
+                perMove     : 1,
                 gap         : '1.5rem',
                 arrows      : false,
                 pagination  : false,
@@ -713,8 +766,9 @@
                 speed       : 700,
                 easing      : 'cubic-bezier(0.25, 1, 0.5, 1)',
                 breakpoints : {
-                    1024: { perPage: 2, perMove: 2 },
-                    640 : { perPage: 1, perMove: 1, padding: { right: '2rem' } },
+                    1024: { perPage: 2, perMove: 1, gap: '1.25rem' },
+                    768 : { perPage: 1, perMove: 1, gap: '1rem', padding: { right: '2rem' } },
+                    480 : { perPage: 1, perMove: 1, gap: '0.75rem', padding: { right: '1.5rem' } },
                 },
             }).mount();
 
